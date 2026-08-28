@@ -1,6 +1,6 @@
 # Gil · Water Portal Assistant (SIHS/BA)
 
-Backend for the **Kaio** virtual assistant, used in the Water Portal of the Bahia Secretariat of Water Infrastructure and Sanitation.
+Backend for the **Gil** virtual assistant, used in the Water Portal of the Bahia Secretariat of Water Infrastructure and Sanitation.
 
 Gil explains the portal, territorial divisions, and topics related to water, sanitation, and water infrastructure. Official figures and statistics remain available on the Experience Builder screens.
 
