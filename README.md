@@ -1,8 +1,8 @@
-# GIL · Assistente do Portal da Água (SIHS/BA)
+# Gil · Assistente do Portal da Água (SIHS/BA)
 
 Backend do assistente virtual **Kaio**, usado no Portal da Água da Secretaria de Infraestrutura Hídrica e Saneamento da Bahia.
 
-O Kaio explica o portal, os recortes territoriais e os temas de água, saneamento e infraestrutura hídrica. Os números oficiais continuam nas telas do Experience Builder.
+O Gil explica o portal, os recortes territoriais e os temas de água, saneamento e infraestrutura hídrica. Os números oficiais continuam nas telas do Experience Builder.
 
 ---
 
