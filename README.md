@@ -1,38 +1,38 @@
-# Gil · Assistente do Portal da Água (SIHS/BA)
+# Gil · Water Portal Assistant (SIHS/BA)
 
-Backend do assistente virtual **Kaio**, usado no Portal da Água da Secretaria de Infraestrutura Hídrica e Saneamento da Bahia.
+Backend for the **Kaio** virtual assistant, used in the Water Portal of the Bahia Secretariat of Water Infrastructure and Sanitation.
 
-O Gil explica o portal, os recortes territoriais e os temas de água, saneamento e infraestrutura hídrica. Os números oficiais continuam nas telas do Experience Builder.
-
----
-
-## O que ele cobre
-
-- Portal da Água: início, infraestrutura hídrica, abastecimento, esgotamento, Atlas e Sobre
-- Recortes: Estado, Território de Identidade, Região Semiárida e município (417 municípios)
-- Fontes: Censo IBGE 2022, SIDRA 6803 e 6805, setores censitários, web maps de ativos da SIHS
-
-Modelo: `openai/gpt-oss-120b` via [Groq](https://groq.com) (substituto do `llama-3.3-70b-versatile`, desligado em 16/08/2026).
+Gil explains the portal, territorial divisions, and topics related to water, sanitation, and water infrastructure. Official figures and statistics remain available on the Experience Builder screens.
 
 ---
 
-## Variáveis de ambiente
+## What it covers
 
-Crie um arquivo `.env` na raiz desta pasta:
+* Water Portal: Home, Water Infrastructure, Water Supply, Sewage, Atlas, and About
+* Territorial divisions: State, Identity Territory, Semi-Arid Region, and municipality (417 municipalities)
+* Data sources: IBGE 2022 Census, SIDRA 6803 and 6805, census sectors, and SIHS asset web maps
+
+Model: `openai/gpt-oss-120b` via [Groq](https://groq.com?utm_source=chatgpt.com) (replacing `llama-3.3-70b-versatile`, which was discontinued on 08/16/2026).
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the root of this folder:
 
 ```env
 PORT=3002
-GROQ_API_KEY=sua_chave_api_aqui
+GROQ_API_KEY=your_api_key_here
 GROQ_MODEL=openai/gpt-oss-120b
 ```
 
-Gere a chave em [console.groq.com/keys](https://console.groq.com/keys).
+Generate your API key at [console.groq.com/keys](https://console.groq.com/keys?utm_source=chatgpt.com).
 
-A porta 3002 evita conflito com o Experience Builder (no seu caso, `https://localhost:3001/builder`).
+Port 3002 prevents conflicts with Experience Builder (in your case, `https://localhost:3001/builder`).
 
 ---
 
-## Como executar localmente
+## How to Run Locally
 
 ```bash
 cd PID-Assistant-API---BACKEND
@@ -42,7 +42,7 @@ npm run dev
 
 API: `http://localhost:3002`
 
-No widget do portal, use:
+In the portal widget, use:
 
 ```text
 http://localhost:3002/api/chat
@@ -54,19 +54,19 @@ http://localhost:3002/api/chat
 
 ### POST `/api/chat`
 
-Requisição:
+Request:
 
 ```json
 {
-  "message": "Como filtro a região semiárida no portal?"
+  "message": "How do I filter the Semi-Arid Region in the portal?"
 }
 ```
 
-Resposta:
+Response:
 
 ```json
 {
-  "response": "No Início, abra o indicador Região Semiárida e aplique o filtro. O mapa e o painel Bahia em números passam a mostrar só esse recorte."
+  "response": "On the Home page, open the Semi-Arid Region indicator and apply the filter. The map and the Bahia in Numbers panel will then display only this territorial division."
 }
 ```
 
@@ -74,10 +74,10 @@ Resposta:
 
 ## Prompt
 
-O comportamento do Kaio está em `src/services/geminiService.js` (`SYSTEM_PROMPT`). Ele responde em português, sem markdown, e não inventa estatísticas municipais.
+Kaio's behavior is defined in `src/services/geminiService.js` (`SYSTEM_PROMPT`). It responds in Portuguese, without Markdown, and does not make up municipal statistics.
 
 ---
 
-## Autor
+## Author
 
-Adaptado a partir da PID Assistant API para o contexto do Portal da Água / SIHS Bahia.
+Adapted from the PID Assistant API for the Water Portal / SIHS Bahia context.
