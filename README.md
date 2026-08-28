@@ -74,7 +74,7 @@ Response:
 
 ## Prompt
 
-Kaio's behavior is defined in `src/services/geminiService.js` (`SYSTEM_PROMPT`). It responds in Portuguese, without Markdown, and does not make up municipal statistics.
+Gil's behavior is defined in `src/services/geminiService.js` (`SYSTEM_PROMPT`). It responds in Portuguese, without Markdown, and does not make up municipal statistics.
 
 ---
 
