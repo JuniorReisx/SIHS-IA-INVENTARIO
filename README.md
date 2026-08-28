@@ -1,4 +1,4 @@
-# Kaio · Assistente do Portal da Água (SIHS/BA)
+# GIL · Assistente do Portal da Água (SIHS/BA)
 
 Backend do assistente virtual **Kaio**, usado no Portal da Água da Secretaria de Infraestrutura Hídrica e Saneamento da Bahia.
 
