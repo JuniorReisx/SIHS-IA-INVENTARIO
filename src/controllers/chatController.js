@@ -2,14 +2,14 @@ import { generateResponse } from "../services/geminiService.js";
 
 export async function sendMessage(req, res) {
   try {
-    const { message } = req.body;
+    const { message, history } = req.body;
     console.log("Body recebido:", req.body);
 
     if (!message || typeof message !== "string" || message.trim() === "") {
       return res.status(400).json({ error: "A mensagem é obrigatória." });
     }
 
-    const response = await generateResponse(message.trim());
+    const response = await generateResponse(message.trim(), history);
 
     return res.status(200).json({ response });
   } catch (error) {
